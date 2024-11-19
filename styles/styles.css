@@ -169,6 +169,7 @@ header {
 #services-section {
     text-align: center;
     background-color: #F2F2F2;
+    padding-top: 50px;
     padding-bottom: 30px;
     h2 {
         font-family: 'Arial', 'Verdana', sans-serif;
