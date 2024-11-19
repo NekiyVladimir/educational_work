@@ -1,0 +1,621 @@
+header {
+    width: 100%;
+}
+
+.title-page {
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    /*left: 0;*/
+    /*width: 100%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #2e99e3;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    width: 150px;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-items a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+.menu-items li {
+    margin-right: 10px;
+}
+
+.search-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.auth-button {
+    padding: 5px 10px;
+    background-color: #2e99e3;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.orders {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    background-color: #3498db; /* Синий цвет фона */
+    display: flex;
+    justify-content: center;
+}
+
+.left-menu, .right-menu {
+    margin: 30px; /* Отступы по краям */
+}
+
+.left-menu img {
+    width: 240px;
+    height: 470px;
+}
+
+.right-menu a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    font: 1em sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.right-menu {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    h1 {
+        font-size: 42px;
+        font-family: 'Arial', 'Verdana', sans-serif;
+        word-wrap: break-word;
+        line-height: 1.2;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 1.5;
+        font-weight: 700;
+        margin: 0;
+    }
+}
+
+
+.right-menu a:first-child {
+    background-color: #27ae60; /* Зеленый цвет кнопки "Разместить заказ" */
+}
+
+.right-menu a:last-child {
+    background-color: #e74c3c; /* Красный цвет кнопки "Я автор" */
+}
+
+#image-section {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.information {
+    h2 {
+        font-family: 'Arial', 'Verdana', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        width: 100%;
+    }
+}
+
+.item {
+    flex-basis: calc(33.333% - 10px);
+    h3 {
+        font-family: 'Arial', 'Verdana', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+}
+
+.counter {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    color: #2e99e3;;
+    margin-top: 10px;
+}
+
+#services-section {
+    text-align: center;
+    background-color: #F2F2F2;
+    padding-bottom: 30px;
+    h2 {
+        font-family: 'Arial', 'Verdana', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        width: 100%;
+        padding-top: 20px;
+    }
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    display: flex;
+    width: 50%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.service img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.service h4 {
+    margin-right: 50px;
+    padding-top: 1px;
+    font-family: Helvetica, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3d424d;
+}
+
+.service p {
+    margin-top: 40px;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 16px;
+    color: #808080;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.service_btn {
+    margin-left: auto;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    color: white;
+    font: 1em sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    height: 20px;
+    background-color: #2e99e3;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.circle.active {
+    background-color: #007bff; /* Цвет подсвеченного кружка */
+}
+
+.all-services-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    color: white;
+    font: 1em sans-serif;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #2e99e3;
+}
+
+.advantage {
+    padding-top: 60px;
+}
+
+.advantage h2 {
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    width: 100%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_item {
+    width: 50%;
+    margin: 10px;
+}
+
+.content_item img {
+    max-width: 60px;
+    padding: 20px;
+    float: left; /* Выравнивание изображения слева */
+    margin-right: 20px; /* Отступ между изображением и текстом */
+}
+
+.content_item_title {
+    left: 100px;
+    top: 20px;
+    margin-top: 10px;
+    align-self: center;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    color: #3d424d;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.content_item_details {
+    margin-top: 10px;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    color: #808080;
+    font-size: 15px;
+}
+
+.best-authors {
+    background-color: #F2F2F2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    h2 {
+        font-family: 'Arial', 'Verdana', sans-serif;
+        font-size: 42px;
+        font-weight: 700;
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+}
+
+.authors-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.author-item {
+    width: 280px;
+    height: 270px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+}
+
+.user-name, .work-period, .work-type, .feedback {
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+}
+
+.feedback {
+    display: flex;
+}
+
+.feedback-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Добавьте отступ между элементами */
+    span {
+        margin-left: 20px;
+    }
+}
+
+.feedback-item img {
+    margin-right: 5px; /* Добавьте отступ между изображением и цифрой */
+}
+
+
+
+
+
+.reviews-site {
+    text-align: center;
+}
+
+.container-reviews-site {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-reviews-site {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.item-review {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 36px;
+}
+
+.item-review span {
+    line-height: 36px;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: #2e99e3;
+}
+
+.item-review p {
+    margin-top: 4px;
+    margin-left: 10px;
+    color: grey;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.block-reviews-site {
+    .service_btn {
+        margin: 20px auto;
+    }    
+}
+
+.block-review {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+
+
+
+
+.work-order {
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.items-work-order {
+    display: flex;
+    justify-content: center;
+}
+
+.item-work-order {
+    background-color: white;
+    margin: 15px;
+    width: 250px;
+    border-radius: 20px;
+    padding: 30px;
+    color: #3d424d;
+    font-family: 'Arial', 'Verdana', sans-serif;
+}
+
+.item-work-order img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+.item-work-order h3 {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 40px;
+}
+
+.item-work-order p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+.latest-orders {
+    background-color: #f2f2f2;
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+.online-experts {
+    display: flex;
+    margin: 20px 350px;
+}
+
+.item-online-experts {
+    flex: 1;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.item-online-experts img {
+    max-width: 100%;
+}
+
+.item-online-experts h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.item-online-experts p {
+    text-align: left;
+}
+
+
+
+
+
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+}
+
+
+footer {
+    background-color: rgb(153, 168, 68);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0 200px;
+}
+
+.footer-item {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.footer-item h2 {
+    margin-bottom: 10px;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 17.5px;
+}
+
+.footer-item a {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Arial', 'Verdana', sans-serif;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.tooltip-toggle:focus + .tooltip-text {
+    display: block;
+}
+
+.tooltip-text {
+    font-family: "PT Sans", sans-serif; / Шрифт текста /
+    background-color: #333333; / Цвет фона /
+    color: #FFFFFF; / Цвет текста /
+    font-size: 16px; / Размер текста /
+    line-height: 20px; / Высота строки /
+    font-weight: 400; / Жирность текста /
+    text-transform: none; / Преобразование текста /
+    padding: 20px 18px 18px 22px; / Отступы внутри элемента /
+    border-radius: 10px; / Скругление углов /
+    width: 256px; / Ширина элемента /
+    position: absolute; / Позиционирование элемента /
+    bottom: 100%; / Расположение элемента относительно нижнего края /
+    left: 50%; / Расположение элемента относительно левого края /
+    z-index: 1; / Настройка наложения элемента /
+    transform: translateX(-50%); / Сдвиг элемента по горизонтали /
+    display: none; / Скрываем элемент по умолчанию /
+}

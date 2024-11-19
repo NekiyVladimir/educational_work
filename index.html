@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Биржа студенческих работ</title>
+ </head>
+ <body>
+    <header>
+        <div class="menu">
+            <div class="logo">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800.1 122.2" fill="white" class="sf-icon-wrapper site-logo__img" data-v-65075598=""><g><path d="M69.2,65.7h35.4c5.4-8.5,9.8-16.8,13.3-24.3l-21-4.5H120c5.8-13.2,8.7-23.3,9.5-26c2.2-7.4,0.7-11.2-1.2-10.9
+                        c-0.4,0.1-10,1.8-23.7,7.6C92,13,76.1,20.6,56.7,40.3c-13,13.1-55.6,73.8-55.6,73.8c-1.7,2.2-1.3,5.4,1,7.1c0.9,0.7,2,1,3.1,1
+                        c1.5,0,3-0.7,4-2l18.1-23.8c1.1,1.7,6.3,8.9,20.3,8.9l0,0c14.9,0,33.5-9.4,47.9-26.7c1.7-2,3.2-4.2,4.6-6.3L69.2,65.7z"></path> <path d="M203.8,94.5c-7.1,0-13.4-1.6-19.1-4.8c-5.6-3.2-10.1-7.5-13.3-13s-4.8-11.7-4.8-18.6c0-6.8,1.6-13,4.9-18.5
+                        c3.3-5.5,7.7-9.9,13.4-13.1s12-4.8,18.9-4.8c6.2,0,11.9,1.2,16.9,3.6s9.1,5.8,12.3,10.1s5.1,9.3,5.9,14.9h-14.5
+                        c-1.2-4.7-3.6-8.4-7.3-11.1c-3.6-2.7-8.1-4.1-13.3-4.1c-4.3,0-8.1,1-11.5,3s-6.1,4.8-8,8.2c-2,3.5-2.9,7.4-2.9,11.7s1,8.2,2.9,11.7
+                        c2,3.5,4.6,6.2,8,8.2s7.2,3,11.5,3c5.2,0,9.7-1.4,13.4-4.2s6.1-6.5,7.2-11.2h14.5c-0.8,5.6-2.9,10.6-6.1,15
+                        c-3.2,4.4-7.3,7.8-12.4,10.2C215.4,93.3,209.9,94.5,203.8,94.5z"></path> <path d="M270.9,36.9h-27.8V23.2h70.3v13.7h-27.8v56.2h-14.7V36.9z"></path> <path d="M393.6,80h8c1.2-5.8,2.1-11.7,2.6-17.8s0.8-13.5,0.8-22.3c0-0.8,0-1.7,0-2.5s0-1.7,0-2.5c0-0.4,0-0.8,0-1.2
+                        s0-0.8,0-1.2v-9.2h58.9v56.8H474v29.2h-14.1V93.1h-52v16.1h-14.1V80H393.6z M449.1,80V36.2h-29.8v3.6c0,8.6-0.3,16-0.8,22.2
+                        c-0.6,6.2-1.4,12.2-2.7,18H449.1z"></path> <path d="M485.8,23.2h35.9c7.6,0,13.7,1.6,18,4.8c4.4,3.2,6.6,7.7,6.6,13.4c0,3.5-0.9,6.6-2.6,9.2
+                        c-1.7,2.6-4.2,4.7-7.5,6.2v0.6c4.1,1.5,7.2,3.7,9.4,6.5c2.1,2.8,3.2,6.3,3.2,10.3c0,6-2.3,10.6-6.9,14s-11,5-19.2,5h-36.9V23.2z
+                         M519.2,52.4c3.7,0,6.7-0.8,8.9-2.4c2.2-1.6,3.4-3.8,3.4-6.5s-1-4.9-3.1-6.5s-5-2.4-8.6-2.4h-19.6v17.9L519.2,52.4L519.2,52.4z
+                         M521.4,81.8c3.9,0,7-0.8,9.2-2.4c2.2-1.6,3.3-3.9,3.3-6.8c0-2.8-1.1-5-3.4-6.6c-2.2-1.6-5.4-2.4-9.4-2.4h-21v18.2H521.4z"></path> <path d="M595.4,94.5c-7.1,0-13.5-1.6-19.2-4.8s-10.3-7.5-13.6-13.1c-3.3-5.5-5-11.7-5-18.5s1.7-13,5-18.5
+                        s7.9-9.9,13.6-13.1c5.8-3.2,12.2-4.8,19.2-4.8c7.1,0,13.5,1.6,19.2,4.8c5.7,3.2,10.3,7.5,13.6,13.1c3.3,5.5,5,11.7,5,18.5
+                        c0,6.7-1.7,12.8-5,18.4c-3.3,5.5-7.9,9.9-13.6,13.1C608.8,92.9,602.4,94.5,595.4,94.5z M595.4,81.1c4.4,0,8.3-1,11.7-2.9
+                        c3.4-2,6.2-4.7,8.1-8.2c2-3.5,2.9-7.4,2.9-11.8c0-4.4-1-8.3-2.9-11.8c-2-3.5-4.7-6.2-8.1-8.2s-7.4-2.9-11.7-2.9
+                        c-4.4,0-8.3,1-11.8,2.9c-3.5,2-6.2,4.7-8.1,8.1c-1.9,3.4-2.9,7.4-2.9,11.9c0,4.4,1,8.3,2.9,11.8c2,3.5,4.7,6.2,8.1,8.2
+                        C587.1,80.1,591,81.1,595.4,81.1z"></path> <path d="M646.7,23.2h13.6v10.2c3-3.7,6.6-6.6,10.8-8.6c4.2-2,8.9-3,14.1-3c6.6,0,12.6,1.6,17.9,4.8
+                        c5.3,3.2,9.5,7.5,12.5,13.1c3,5.5,4.5,11.7,4.5,18.5s-1.5,13-4.5,18.5s-7.2,9.9-12.6,13.1c-5.4,3.2-11.3,4.8-17.8,4.8
+                        c-4.8,0-9.2-0.9-13.2-2.7c-4.1-1.8-7.6-4.4-10.6-7.6v36.8h-14.7L646.7,23.2L646.7,23.2z M683,81.1c4.1,0,7.8-1,11.2-3
+                        c3.4-2,6-4.8,8-8.2c2-3.5,2.9-7.4,2.9-11.7s-1-8.2-2.9-11.7c-2-3.5-4.6-6.2-8-8.2s-7.1-3-11.2-3s-7.8,1-11.2,3
+                        c-3.4,2-6,4.8-7.9,8.2C662,50,661,53.9,661,58.2s1,8.2,2.9,11.7s4.5,6.2,7.9,8.2C675.2,80.1,678.9,81.1,683,81.1z"></path> <path d="M734.1,23.2h14.7v28h11l22-28h17.5l-27.1,34.1l28,35.8h-18.3l-22-28.2h-11v28.2h-14.8V23.2z"></path> <polygon points="380.1,23.2 360.2,66.7 338.1,23.2 321.2,23.2 353,82.5 335.3,121.1 349.7,121.1 395.5,23.2"></polygon></g></svg>
+                </a>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Заказы</a></li>
+                <li><a href="#">Эксперты</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Журнал</a></li>
+                <li><a href="#">Справочник</a></li>
+                <li><a href="#">Вопросы</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <div class="search-icon">🔍</div>
+            <button class="auth-button">Войти</button>
+        </div>
+    </header>
+    <section class="orders">
+        <div class="left-menu">
+            <img src="img/boy-using-mobile.webp">
+        </div>
+        <div class="right-menu">
+            <h1>Сервис помощи студентам</h1>
+            <h2>С нами работаю лучшие авторы</h2>
+            <h2>учебных работ</h2>
+            <div>
+                <a href="">Разместить заказ</a>
+                <a href="">Я автор</a>
+            </div>
+        </div>
+    </section>
+    <section class="information" id="image-section">
+        <h2>Нам доверяют</h2>
+        <div class="item">
+            <img src="img/students.webp" alt="Студенты">
+            <div class="counter" data-target="9753">0</div>
+            <h3>Студентов</h3>
+        </div>
+        <div class="item">
+            <img src="img/authors.webp" alt="Лучших авторов">
+            <div class="counter" data-target="1258">0</div>
+            <h3>Лучших авторов</h3>
+        </div>
+        <div class="item">
+            <img src="img/companies.webp" alt="Компаний">
+            <div class="counter" data-target="572">0</div>
+            <h3>Компаний</h3>
+        </div>
+    </section>
+    <section id="services-section">
+        <h2>Наши услуги</h2>
+        <div class="services-container">
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+            <div class="service">
+                <img src="img/chertezh.webp" alt="Графическое изображение">
+                <h4>Чертеж</h4>
+                <p>Срок: от 3 часов</p>
+                <p>Цена: от 500 ₽</p>
+                <a href="" class="service_btn">Заказать</a>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <a href="#" class="all-services-btn">Все услуги</a>
+    </section>
+    <section class="advantage">
+        <h2>Преимущества и гарантии</h2>
+        <div class="content">
+            <div class="content_item">
+                <img src="img/advantage/reward.webp" alt="Гарантия на заказ">
+                <div class="content_item_title">Гарантия на заказ — 1 год</div>
+                <div class="content_item_details">Все доработки в течение этого срока будут бесплатными</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/money.webp" alt="Цена на заказ">
+                <div class="content_item_title">Цену на заказ вы назначаете сами</div>
+                <div class="content_item_details">Вы сами решаете, сколько готовы заплатить за работу</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/thumb-up-alt.webp" alt="OK">
+                <div class="content_item_title">4.97 — средний балл оценки наших работ</div>
+                <div class="content_item_details">В восторге не только студенты, но и преподаватели, которые принимают работу</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/graduation-hat-with-scroll.webp" alt="За 14 лет мы выполнили 4 365 039 работ">
+                <div class="content_item_title">За 14 лет мы выполнили 4 365 039 работ</div>
+                <div class="content_item_details">Наши эксперты ежедневно помогают сотням студентов с заданиямиу</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/graduate-student.webp" alt="Квалифицированные специалисты">
+                <div class="content_item_title">Квалифицированные специалисты</div>
+                <div class="content_item_details">С нами сотрудничают 91 772 автора студенческих работ</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/green-shield.webp" alt="Безопасная сделка">
+                <div class="content_item_title">Безопасная сделка</div>
+                <div class="content_item_details">Если эксперт не справится, мы вернём деньги</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/shield.webp" alt="Высокая уникальность работ">
+                <div class="content_item_title">Высокая уникальность работ</div>
+                <div class="content_item_details">от 70% процентов по любой системе проверки</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/calendar-with-clock-alt.webp" alt="Оперативность выполнения">
+                <div class="content_item_title">Оперативность выполнения</div>
+                <div class="content_item_details">Минимальный срок выполнения заказа - 1 час</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/clock.webp" alt="Быстрые отклики на ваш заказ">
+                <div class="content_item_title">Быстрые отклики на ваш заказ</div>
+                <div class="content_item_details">Авторы начнут откликаться уже в течение первых 10 минут</div>
+            </div>
+            <div class="content_item">
+                <img src="img/advantage/discount.webp" alt="Отсутствие скрытых комиссий">
+                <div class="content_item_title">Отсутствие скрытых комиссий</div>
+                <div class="content_item_details">Никаких переплат, все комиссии указаны внутри сайта</div>
+            </div>
+        </div>
+    </section>
+    <section class="best-authors">
+        <h2>Лучшие авторы</h2>
+        <div class="authors-items">
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="img/user.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" fill="#20da3b" wight="16px" height="16px" ariahidden="true" 
+                        role="img" data-icon="fas/thumbs-up" viewBox="0 0 512 512"  data-v-150fe51e="" ariaHidden="true">
+                        <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 
+                        25.3-19.5 46-44.3 47.9c7.7 8.5 12.3 19.8 12.3 32.1c0 23.4-16.8 42.9-38.9 47.1c4.4 7.2 6.9 15.8 6.9 24.9c0 21.3-13.9 
+                        39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 
+                        390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 
+                        56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z">
+                    </path></svg>
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="fas/trophy-star" 
+                        viewBox="0 0 576 512"  data-v-150fe51e="" fill="#f4c931" wight="16px" height="16px" ariaHidden="true">
+                        <path d="M176 0H400c26.5 0 48.1 21.8 47.1 48.2c-.2 5.3-.4 10.6-.7 15.8H552c13.3 0 24 10.7 24 24c0 91.7-31.9 155.7-75 
+                        199.5c-42.5 43.2-94.6 65.2-133.4 76.5C344 370.8 328 390.5 328 410.1c0 21 17 37.9 37.9 37.9H384c17.7 0 32 14.3 32 32s-14.3 
+                        32-32 32H192c-17.7 0-32-14.3-32-32s14.3-32 32-32h18.1c21 0 37.9-17 37.9-37.9c0-19.6-16-39.3-39.6-46.1c-38.9-11.3-90.9-33.3
+                        -133.4-76.5C31.9 243.7 0 179.7 0 88C0 74.7 10.7 64 24 64H129.6c-.3-5.2-.5-10.4-.7-15.8C127.9 21.8 149.5 0 176 0zM133.2 
+                        112H48.9c4.9 66 29.8 110.8 60.3 141.8c23.7 24 51.4 40.4 77.6 51.6c-23.4-40.3-44.2-101.2-53.5-193.4zm256 193.4c26.2-11.2 
+                        53.9-27.6 77.6-51.6c30.5-31 55.4-75.8 60.3-141.8H442.7c-9.4 92.2-30.1 153.1-53.5 193.4zm-94-218.9c-2.9-5.9-11.4-5.9-14.3 
+                        0l-19.2 38.9c-1.2 2.4-3.4 4-6 4.4L212.7 136c-6.6 1-9.2 9-4.4 13.6l31 30.2c1.9 1.8 2.7 4.5 2.3 7.1l-7.3 42.7c-1.1 6.5 5.7 
+                        11.5 11.6 8.4L284.3 218c2.3-1.2 5.1-1.2 7.4 0l38.4 20.2c5.9 3.1 12.7-1.9 11.6-8.4L334.4 187c-.4-2.6 .4-5.2 2.3-7.1l31-30.2
+                        c4.7-4.6 2.1-12.7-4.4-13.6l-42.9-6.2c-2.6-.4-4.9-2-6-4.4L295.2 86.5z"></path></svg>
+                        <span class="rating-count">10000</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="fas/book" 
+                        viewBox="0 0 448 512"  data-v-150fe51e="" fill="#2e99e3" wight="16px" height="16px" ariaHidden="true">
+                        <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 
+                        32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 
+                        16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 
+                        16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+                        <span class="orders-count">20000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="img/user.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" fill="#20da3b" wight="16px" height="16px" ariahidden="true" 
+                        role="img" data-icon="fas/thumbs-up" viewBox="0 0 512 512"  data-v-150fe51e="" ariaHidden="true">
+                        <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 
+                        25.3-19.5 46-44.3 47.9c7.7 8.5 12.3 19.8 12.3 32.1c0 23.4-16.8 42.9-38.9 47.1c4.4 7.2 6.9 15.8 6.9 24.9c0 21.3-13.9 
+                        39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 
+                        390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 
+                        56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z">
+                    </path></svg>
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="fas/trophy-star" 
+                        viewBox="0 0 576 512"  data-v-150fe51e="" fill="#f4c931" wight="16px" height="16px" ariaHidden="true">
+                        <path d="M176 0H400c26.5 0 48.1 21.8 47.1 48.2c-.2 5.3-.4 10.6-.7 15.8H552c13.3 0 24 10.7 24 24c0 91.7-31.9 155.7-75 
+                        199.5c-42.5 43.2-94.6 65.2-133.4 76.5C344 370.8 328 390.5 328 410.1c0 21 17 37.9 37.9 37.9H384c17.7 0 32 14.3 32 32s-14.3 
+                        32-32 32H192c-17.7 0-32-14.3-32-32s14.3-32 32-32h18.1c21 0 37.9-17 37.9-37.9c0-19.6-16-39.3-39.6-46.1c-38.9-11.3-90.9-33.3
+                        -133.4-76.5C31.9 243.7 0 179.7 0 88C0 74.7 10.7 64 24 64H129.6c-.3-5.2-.5-10.4-.7-15.8C127.9 21.8 149.5 0 176 0zM133.2 
+                        112H48.9c4.9 66 29.8 110.8 60.3 141.8c23.7 24 51.4 40.4 77.6 51.6c-23.4-40.3-44.2-101.2-53.5-193.4zm256 193.4c26.2-11.2 
+                        53.9-27.6 77.6-51.6c30.5-31 55.4-75.8 60.3-141.8H442.7c-9.4 92.2-30.1 153.1-53.5 193.4zm-94-218.9c-2.9-5.9-11.4-5.9-14.3 
+                        0l-19.2 38.9c-1.2 2.4-3.4 4-6 4.4L212.7 136c-6.6 1-9.2 9-4.4 13.6l31 30.2c1.9 1.8 2.7 4.5 2.3 7.1l-7.3 42.7c-1.1 6.5 5.7 
+                        11.5 11.6 8.4L284.3 218c2.3-1.2 5.1-1.2 7.4 0l38.4 20.2c5.9 3.1 12.7-1.9 11.6-8.4L334.4 187c-.4-2.6 .4-5.2 2.3-7.1l31-30.2
+                        c4.7-4.6 2.1-12.7-4.4-13.6l-42.9-6.2c-2.6-.4-4.9-2-6-4.4L295.2 86.5z"></path></svg>
+                        <span class="rating-count">10000</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="fas/book" 
+                        viewBox="0 0 448 512"  data-v-150fe51e="" fill="#2e99e3" wight="16px" height="16px" ariaHidden="true">
+                        <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 
+                        32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 
+                        16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 
+                        16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+                        <span class="orders-count">20000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="img/user.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" fill="#20da3b" wight="16px" height="16px" ariahidden="true" 
+                        role="img" data-icon="fas/thumbs-up" viewBox="0 0 512 512"  data-v-150fe51e="" ariaHidden="true">
+                        <path d="M313.4 32.9c26 5.2 42.9 30.5 37.7 56.5l-2.3 11.4c-5.3 26.7-15.1 52.1-28.8 75.2H464c26.5 0 48 21.5 48 48c0 
+                        25.3-19.5 46-44.3 47.9c7.7 8.5 12.3 19.8 12.3 32.1c0 23.4-16.8 42.9-38.9 47.1c4.4 7.2 6.9 15.8 6.9 24.9c0 21.3-13.9 
+                        39.4-33.1 45.6c.7 3.3 1.1 6.8 1.1 10.4c0 26.5-21.5 48-48 48H294.5c-19 0-37.5-5.6-53.3-16.1l-38.5-25.7C176 420.4 160 
+                        390.4 160 358.3V320 272 247.1c0-29.2 13.3-56.7 36-75l7.4-5.9c26.5-21.2 44.6-51 51.2-84.2l2.3-11.4c5.2-26 30.5-42.9 
+                        56.5-37.7zM32 192H96c17.7 0 32 14.3 32 32V448c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32V224c0-17.7 14.3-32 32-32z">
+                    </path></svg>
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="fas/trophy-star" 
+                        viewBox="0 0 576 512"  data-v-150fe51e="" fill="#f4c931" wight="16px" height="16px" ariaHidden="true">
+                        <path d="M176 0H400c26.5 0 48.1 21.8 47.1 48.2c-.2 5.3-.4 10.6-.7 15.8H552c13.3 0 24 10.7 24 24c0 91.7-31.9 155.7-75 
+                        199.5c-42.5 43.2-94.6 65.2-133.4 76.5C344 370.8 328 390.5 328 410.1c0 21 17 37.9 37.9 37.9H384c17.7 0 32 14.3 32 32s-14.3 
+                        32-32 32H192c-17.7 0-32-14.3-32-32s14.3-32 32-32h18.1c21 0 37.9-17 37.9-37.9c0-19.6-16-39.3-39.6-46.1c-38.9-11.3-90.9-33.3
+                        -133.4-76.5C31.9 243.7 0 179.7 0 88C0 74.7 10.7 64 24 64H129.6c-.3-5.2-.5-10.4-.7-15.8C127.9 21.8 149.5 0 176 0zM133.2 
+                        112H48.9c4.9 66 29.8 110.8 60.3 141.8c23.7 24 51.4 40.4 77.6 51.6c-23.4-40.3-44.2-101.2-53.5-193.4zm256 193.4c26.2-11.2 
+                        53.9-27.6 77.6-51.6c30.5-31 55.4-75.8 60.3-141.8H442.7c-9.4 92.2-30.1 153.1-53.5 193.4zm-94-218.9c-2.9-5.9-11.4-5.9-14.3 
+                        0l-19.2 38.9c-1.2 2.4-3.4 4-6 4.4L212.7 136c-6.6 1-9.2 9-4.4 13.6l31 30.2c1.9 1.8 2.7 4.5 2.3 7.1l-7.3 42.7c-1.1 6.5 5.7 
+                        11.5 11.6 8.4L284.3 218c2.3-1.2 5.1-1.2 7.4 0l38.4 20.2c5.9 3.1 12.7-1.9 11.6-8.4L334.4 187c-.4-2.6 .4-5.2 2.3-7.1l31-30.2
+                        c4.7-4.6 2.1-12.7-4.4-13.6l-42.9-6.2c-2.6-.4-4.9-2-6-4.4L295.2 86.5z"></path></svg>
+                        <span class="rating-count">10000</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="fas/book" 
+                        viewBox="0 0 448 512"  data-v-150fe51e="" fill="#2e99e3" wight="16px" height="16px" ariaHidden="true">
+                        <path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 
+                        32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 
+                        16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 
+                        16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg>
+                        <span class="orders-count">20000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="img/user.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <img src="feedback1.jpg" alt="Positive Feedback">
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <img src="rating.jpg" alt="Rating">
+                        <span class="rating-count">4.5</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <img src="orders.jpg" alt="Orders">
+                        <span class="orders-count">150</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="image.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <img src="feedback1.jpg" alt="Positive Feedback">
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <img src="rating.jpg" alt="Rating">
+                        <span class="rating-count">4.5</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <img src="orders.jpg" alt="Orders">
+                        <span class="orders-count">150</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="image.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <img src="feedback1.jpg" alt="Positive Feedback">
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <img src="rating.jpg" alt="Rating">
+                        <span class="rating-count">4.5</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <img src="orders.jpg" alt="Orders">
+                        <span class="orders-count">150</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="image.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <img src="feedback1.jpg" alt="Positive Feedback">
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <img src="rating.jpg" alt="Rating">
+                        <span class="rating-count">4.5</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <img src="orders.jpg" alt="Orders">
+                        <span class="orders-count">150</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="image.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <img src="feedback1.jpg" alt="Positive Feedback">
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <img src="rating.jpg" alt="Rating">
+                        <span class="rating-count">4.5</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <img src="orders.jpg" alt="Orders">
+                        <span class="orders-count">150</span>
+                    </div>
+                </div>
+            </div>
+            <div class="author-item">
+                <div class="image-container">
+                    <img src="image.jpg" alt="User Image">
+                </div>
+                <div class="user-name">John Doe</div>
+                <div class="work-period">Worked since 2018</div>
+                <div class="work-type">Web Developer</div>
+                <div class="feedback">
+                    <div class="feedback-item" data-tooltip="Количество положительных отзывов">
+                        <img src="feedback1.jpg" alt="Positive Feedback">
+                        <span class="feedback-count">100</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Рейтинг автора">
+                        <img src="rating.jpg" alt="Rating">
+                        <span class="rating-count">4.5</span>
+                    </div>
+                    <div class="feedback-item" data-tooltip="Всего выполненных заказов">
+                        <img src="orders.jpg" alt="Orders">
+                        <span class="orders-count">150</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination"></div>
+    </section>
+    <section class="reviews-site">
+        <h2 class="title-page">Отзывы о сайте</h2>
+        <div class="container-reviews-site">
+            <div class="block-reviews-site">
+                <div class="block-review">
+                    <span>12364</span>
+                    <p>отзывов</p>
+                </div>
+                <div class="block-review">
+                    <span>4.96</span>
+                    <p>средняя оценка</p>
+                </div>
+            </div>
+            <div class="block-reviews-site">
+                <div class="reviews">
+                    <div class="review">
+                        <p>Отзыв 1</p>
+                    </div>
+                    <div class="review">
+                        <p>Отзыв 2</p>
+                    </div>
+                    <button class="prev">Назад</button>
+                    <button class="next">Вперед</button>
+                </div>
+            </div>
+            <div class="block-reviews-site">
+                <a href="#" class="service_btn">Все отзывы</a>
+            </div>
+        </div>
+    </section>
+    <section class="work-order">
+        <h2 class="title-page">Процесс заказа работы</h2>
+        <div class="items-work-order">
+            <div class="item-work-order">
+                <img src="img/advantage/megaphone.webp">
+                <h3>1. Размещаете задачу</h3>
+                <p>Заполните форму заказа и опубликуйие его в ленте.</p>
+            </div>
+            <div class="item-work-order">
+                <img src="img/advantage/graduate-student.webp">
+                <h3>2. Выберите исполнителя</h3>
+                <p>Выберите автора, учитывая отзывы и рейтинг.</p>
+            </div>
+            <div class="item-work-order">
+                <img src="img/advantage/yellow-book.webp">
+                <h3>3. Получаете результат</h3>
+                <p>Оплатите и скачайте работу, когда автор её выполнит.</p>
+            </div>
+        </div>
+        <a href="#" class="service_btn">Разместить заказ</a>
+    </section>
+    <section class="popular-questions">
+        <h2 class="title-page">Популярные вопросы</h2>
+    </section>
+    <section class="latest-orders">
+        <h2 class="title-page">Последние заказы</h2>
+    </section>
+    <section class="page-online-experts">
+        <h2 class="title-page">Довертесь экспертам</h2>
+        <div class="online-experts">
+            <div class="item-online-experts">
+                <img src="img/online-experts.png" alt="Онлайн эксперты">
+            </div>
+            <div class="item-online-experts">
+                <h3>Онлайн экспертов</h3>
+                <span>123</span>
+                <p>Наша система отправит ваш заказ на оценку <strong>92 327</strong> авторам. Первые отклики появятся уже в течении 10 минут.</p>
+                <a href="#" class="service_btn">Разместить заказ</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-item">
+                <h2>Служба поддержки</h2>
+                <a href="#">8 (800) 500-78-57</a>
+                <a href="#">support@studwork.ru</a>
+                <p>График работы</p>
+                <p>Пн – Пт: 08:00 – 18:00 (МСК)</p>
+                <p>Сб: 08:00 – 17:00 (МСК)</p>
+                <a href="" class="service_btn">Написать нам</a>
+            </div>
+            <div class="footer-item">
+                <h2>Вакансии</h2>
+                <a href="#">Стать автором</a>
+                <a href="#">Все вакансии</a>
+                <a href="#">Работа для преподавателей</a>
+                <a href="#">Работа для репетиторов</a>
+                <a href="#">Работа для учителей</a>
+                <a href="#">Работа для студентов</a>
+            </div>
+            <div class="footer-item">
+                <h2>Услуги</h2>
+                <a href="#">Дипломная работа</a>
+                <a href="#">Курсовая работа</a>
+                <a href="#">Контрольная работа</a>
+                <a href="#">Отчет по практике</a>
+                <a href="#">Реферат</a>
+                <a href="#">Сочинение</a>
+                <a href="#">Онлайн-помощь</a>
+                <a href="#">Чертежи</a>
+                <a href="#">Эссе</a>
+            </div>
+            <div class="footer-item">
+                <h2>О проекте</h2>
+                <a href="#">О компании</a>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Юридическая информация</a>
+                <a href="#">Гарантии</a>
+                <a href="#">Об оплате</a>
+                <a href="#">Безопасная сделка</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Топ экспертов</a>
+                <a href="#">Агенствам</a>
+                <a href="#">Партнерская программа</a>
+                <a href="#">Вопросы и ответы</a>
+                <a href="#">Контакты</a>
+                <a href="#">ВУЗы</a>
+                <a href="#">Карта сайта</a>
+            </div>
+            <div class="footer-item">
+                <h2>Статистика</h2>
+                <p>766 472 пользователя</p>
+                <p>+601 новый пользователь</p>
+                <p>396 сейчас на сайте</p>
+                <p>2 651 заказ в сутки</p>
+            </div>
+            <div class="footer-item">
+                <a href="#">Бизнес план</a>
+                <a href="#">Все услуги</a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="far/store" 
+                    viewBox="0 0 576 512" fill="white" wight="16px" height="16px" ariaHidden="true"><path d="M483.4 224C463.8 224 445.8 217.5 431.3 206.8C426.5 203.3 
+                    422.2 199.4 418.3 195C414.4 199.3 410.1 203.2 405.4 206.7C390.9 217.5 372.8 224 353.1 224C333.5 224 315.6 217.6 301.1 
+                    206.1C296.3 203.4 291.9 199.4 287.9 195C283.9 199.4 279.5 203.4 274.7 206.1C260.2 217.6 242.3 224 222.7 224C203.2 224 185.2 
+                    217.6 170.7 206.1C165.9 203.4 161.5 199.4 157.6 195C153.6 199.4 149.1 203.4 144.3 206.1C129.9 217.6 111.1 223.1 92.41 
+                    224C92.39 224 92.38 224 92.36 224C88.3 224 84.21 223.7 80.24 223.2C24.92 215.8-1.255 150.6 28.33 103.8L85.66 13.13C90.76 
+                    4.979 99.87 0 109.6 0H466.4C476.1 0 485.2 4.978 490.3 13.13L547.6 103.8C577.3 150.7 551 215.8 495.5 223.2C491.6 223.7 487.6 
+                    223.1 483.5 224C483.5 224 483.5 224 483.4 224H483.4zM455.6 48H120.4L68.91 129.5C63.12 138.6 62.57 149.9 66.65 159.6C70.57 
+                    168.8 77.67 174.4 86.56 175.6C88.57 175.9 90.54 176 92.36 176C104.2 176 114.6 170.9 121.9 162.8C131 152.8 143.1 147 157.6 
+                    147C171.1 147 184.1 152.8 193.2 162.8C200.5 170.9 210.9 176 222.7 176C234.6 176 244.1 170.9 252.3 162.8C261.4 152.8 274.3 147 
+                    287.9 147C301.5 147 314.4 152.8 323.5 162.8C330.8 170.9 341.3 176 353.1 176C364.9 176 375.3 170.9 382.6 162.8C391.7 152.8 
+                    404.6 147 418.2 147C431.7 147 444.7 152.7 453.8 162.8C461.2 170.9 471.7 176 483.4 176C485.4 176 487.3 175.9 489.3 175.6C498.3 
+                    174.4 505.4 168.8 509.3 159.6C513.4 149.1 512.9 138.7 507.1 129.5L455.6 48zM464 336V254.4C470.3 255.5 476.8 256 483.4 256C489 
+                    256 494.4 255.6 499.7 254.9L499.7 254.9C503.1 254.4 508 253.6 512 252.6V448C512 483.3 483.3 512 448 512H128C92.66 512 64 483.3 
+                    64 448V252.6C67.87 253.6 71.86 254.4 75.97 254.9L76.09 254.9C81.35 255.6 86.83 256 92.36 256C99.06 256 105.6 255.4 112 
+                    254.4V336H464zM464 384H112V448C112 456.8 119.2 464 128 464H448C456.8 464 464 456.8 464 448V384z"></path></svg>
+                    Готовые работы</a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="far/briefcase" viewBox="0 0 512 512"
+                    fill="white" wight="16px" height="16px" ariaHidden="true"><path d="M448 96h-64V64c0-35.35-28.65-64-64-64H192C156.7 0 128 28.65 128 
+                    64v32H64C28.65 96 0 124.7 0 160v256c0 35.35 28.65 64 64 64h384c35.35 0 64-28.65 64-64V160C512 124.7 483.3 96 448 96zM192 
+                    48h128c8.837 0 16 7.163 16 16v32h-160V64C176 55.16 183.2 48 192 48zM64 144h384c8.8 0 16 7.2 16 16v96h-416V160C48 151.2 55.2 
+                    144 64 144zM448 432H64c-8.8 0-16-7.2-16-16V304H192V320c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V304h144V416C464 424.8 
+                    456.8 432 448 432z"></path></svg>
+                    Портфолио</a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" data-icon="far/podcast" viewBox="0 0 448 512"
+                    fill="white" wight="16px" height="16px" ariaHidden="true"><path d="M224 304c-34.19 0-66.56 8.969-66.56 45.5c0 34.45 13.39 108.5 21.45 
+                    138.2C184.2 507.4 204.4 512 224 512s39.78-4.551 45.11-24.31c8.061-29.9 21.45-103.9 21.45-138.2C290.6 312.1 258.2 304 224 
+                    304zM225.5 463.1C225.1 463.1 224.5 464 224 464c-.5449 0-1.062-.0059-1.551-.0156c-6.928-30.01-15.84-82.73-16.87-110.3C209.1 
+                    352.8 214.9 352 224 352c9.109 0 14.97 .8457 18.48 1.656C241.6 380.4 232.6 433.3 225.5 463.1zM224 288c35.38 0 64-28.62 
+                    64-64s-28.62-64-64-64S160 188.6 160 224S188.6 288 224 288zM224 208c8.822 0 16 7.178 16 16S232.8 240 224 240S208 232.8 208 
+                    224S215.2 208 224 208zM224 0C100.5 0 0 100.5 0 224c0 71.13 32.66 136.4 89.59 179.2C93.91 406.4 98.97 408 103.1 408c7.312 0 
+                    14.5-3.312 19.22-9.594c7.969-10.59 5.812-25.64-4.781-33.59C73.66 331.2 48 279.9 48 224c0-97.05 78.97-176 176-176s176 78.95 176 
+                    176c0 55.88-25.66 107.2-70.38 140.8c-10.59 7.969-12.75 23-4.781 33.61c7.969 10.55 23 12.8 33.59 4.766C415.3 360.4 448 295.1 
+                    448 224C448 100.5 347.5 0 224 0zM345.8 300.8C360.3 277.8 368 251.3 368 224c0-79.41-64.59-144-144-144S80 144.6 80 224c0 27.27 
+                    7.656 53.83 22.19 76.81C109.3 312 124.1 315.4 135.3 308.3s14.56-21.91 7.469-33.11C133.1 259.9 128 242.2 128 224c0-52.94 
+                    43.06-96 96-96s96 43.06 96 96c0 18.19-5.094 35.89-14.75 51.19c-7.094 11.2-3.75 26.03 7.469 33.11C316.7 310.8 321.1 312 325.5 
+                    312C333.5 312 341.3 308 345.8 300.8z"></path></svg>
+                    Вопросы QA</a>
+            </div>
+            <div class="footer-item">
+                <h2>Мы в социальных сетях</h2>
+                <div >
+                    <a href="#"class="tooltip-toggle"><svg xmlns="http://www.w3.org/2000/svg" focusable="false" ariahidden="true" role="img" 
+                        data-icon="fab/odnoklassniki" viewBox="0 0 320 512" fill="#70a2b8" wight="28px" height="28px" data-v-7a9f8cfe="" ariaHidden="true" 
+                        data-v-cb78c2c6=""><path d="M275.1 334c-27.4 17.4-65.1 24.3-90 26.9l20.9 20.6 76.3 76.3c27.9 28.6-17.5 73.3-45.7 
+                        45.7-19.1-19.4-47.1-47.4-76.3-76.6L84 503.4c-28.2 27.5-73.6-17.6-45.4-45.7 19.4-19.4 47.1-47.4 
+                        76.3-76.3l20.6-20.6c-24.6-2.6-62.9-9.1-90.6-26.9-32.6-21-46.9-33.3-34.3-59 7.4-14.6 27.7-26.9 54.6-5.7 0 0 36.3 28.9 94.9 
+                        28.9s94.9-28.9 94.9-28.9c26.9-21.1 47.1-8.9 54.6 5.7 12.4 25.7-1.9 38-34.5 59.1zM30.3 129.7C30.3 58 88.6 0 160 0s129.7 58 
+                        129.7 129.7c0 71.4-58.3 129.4-129.7 129.4s-129.7-58-129.7-129.4zm66 0c0 35.1 28.6 63.7 63.7 63.7s63.7-28.6 
+                        63.7-63.7c0-35.4-28.6-64-63.7-64s-63.7 28.6-63.7 64z"></path></svg>
+                    </a>
+                    <span class="tooltip-text">Однокласники</span>    
+                </div>    
+            </div>
+            <div class="footer-item">
+                <h2>Принимаем к оплате</h2>
+                <a href="#">Ссылка 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+            </div>
+            <div class="footer-item">
+                <h2>Наши проекты</h2>
+                <a href="#">???</a>
+                <a href="#">© Студворк, 2011-2024</a>
+            </div>
+        </div>
+    </footer>
+  
+ </body>
+ <script>
+    const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCount();
+});
+ </script>
+ <script>
+const servicesContainer = document.querySelector('.services-container');
+const services = servicesContainer.querySelectorAll('.service');
+const navigation = document.querySelector('.navigation');
+const circles = navigation.querySelectorAll('.circle');
+
+const itemsPerPage = 5;
+let currentPage = 0;
+
+function showPage(page) {
+    services.forEach((service, index) => {
+        if (index >= page * itemsPerPage && index < (page + 1) * itemsPerPage) {
+            service.style.display = 'flex';
+        } else {
+            service.style.display = 'none';
+        }
+    });
+}
+
+function setActiveCircle(index) {
+    circles.forEach((circle, i) => {
+        if (i === index) {
+            circle.classList.add('active');
+        } else {
+            circle.classList.remove('active');
+        }
+    });
+}
+
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        currentPage = index;
+        showPage(currentPage);
+        setActiveCircle(currentPage);
+    });
+});
+
+showPage(currentPage);
+setActiveCircle(currentPage);
+ </script>
+ <script>
+    const authorItems = document.querySelectorAll('.author-item');
+    const paginationDots = document.querySelectorAll('.dot');
+    const itemsPerPageAuthor = 3;
+    let currentPageAuthor = 0;
+
+    function showItems() {
+        const startIndex = currentPageAuthor * itemsPerPageAuthor;
+        const endIndex = startIndex + itemsPerPageAuthor;
+
+        authorItems.forEach((item, index) => {
+            if (index >= startIndex && index < endIndex) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    paginationDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentPageAuthor = index;
+            showItems();
+        });
+    });
+
+    showItems();
+ </script>
+ <script>
+    const feedbackItems = document.querySelectorAll('.feedback-item');
+
+feedbackItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = item.dataset.tooltip;
+        document.body.appendChild(tooltip);
+    });
+
+    item.addEventListener('mouseout', () => {
+        const tooltip = document.querySelector('.tooltip');
+        if (tooltip) {
+            tooltip.remove();
+        }
+    });
+});
+ </script>
+ <script>
+const pagination = document.querySelector('.pagination');
+
+authorItems.forEach((item, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) {
+        dot.classList.add('active');
+    }
+    dot.addEventListener('click', () => {
+        currentPage = index;
+        showItems();
+    });
+    pagination.appendChild(dot);
+});
+ </script>
+</html>
