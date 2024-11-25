@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles/styles.css">
-  <title>Студенческие работы на заказ 📚 — быстрая помощь студентам с написанием курсовых, дипломных, контрольных и других работ в онлайн-сервисе Студворк 📌</title>
+  <title>Справочник студента</title>
  </head>
  <body>
     <header>
@@ -49,68 +49,7 @@
             <a href="login.html" class="auth-button">Войти</a>
         </div>
     </header>
-    <section id="services-section">
-        <h2>Студенческие работы на заказ</h2>
-        <div class="services-container">
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-            <div class="service">
-                <img src="img/chertezh.webp" alt="Графическое изображение">
-                <h4>Чертеж</h4>
-                <p>Срок: от 3 часов</p>
-                <p>Цена: от 500 ₽</p>
-                <a href="" class="service_btn">Заказать</a>
-            </div>
-        </div>
-        <a href="#" class="all-services-btn">Все услуги</a>
-    </section>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-item">
@@ -243,4 +182,129 @@
     </footer>
   
  </body>
- </html>
+ <script>
+    const counters = document.querySelectorAll('.counter');
+const speed = 200;
+
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const inc = target / speed;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCount();
+});
+ </script>
+ <script>
+const servicesContainer = document.querySelector('.services-container');
+const services = servicesContainer.querySelectorAll('.service');
+const navigation = document.querySelector('.navigation');
+const circles = navigation.querySelectorAll('.circle');
+
+const itemsPerPage = 5;
+let currentPage = 0;
+
+function showPage(page) {
+    services.forEach((service, index) => {
+        if (index >= page * itemsPerPage && index < (page + 1) * itemsPerPage) {
+            service.style.display = 'flex';
+        } else {
+            service.style.display = 'none';
+        }
+    });
+}
+
+function setActiveCircle(index) {
+    circles.forEach((circle, i) => {
+        if (i === index) {
+            circle.classList.add('active');
+        } else {
+            circle.classList.remove('active');
+        }
+    });
+}
+
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        currentPage = index;
+        showPage(currentPage);
+        setActiveCircle(currentPage);
+    });
+});
+
+showPage(currentPage);
+setActiveCircle(currentPage);
+ </script>
+ <script>
+    const authorItems = document.querySelectorAll('.author-item');
+    const paginationDots = document.querySelectorAll('.dot');
+    const itemsPerPageAuthor = 3;
+    let currentPageAuthor = 0;
+
+    function showItems() {
+        const startIndex = currentPageAuthor * itemsPerPageAuthor;
+        const endIndex = startIndex + itemsPerPageAuthor;
+
+        authorItems.forEach((item, index) => {
+            if (index >= startIndex && index < endIndex) {
+                item.style.display = 'flex';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    paginationDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentPageAuthor = index;
+            showItems();
+        });
+    });
+
+    showItems();
+ </script>
+ <script>
+    const feedbackItems = document.querySelectorAll('.feedback-item');
+
+feedbackItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        const tooltip = document.createElement('div');
+        tooltip.classList.add('tooltip');
+        tooltip.textContent = item.dataset.tooltip;
+        document.body.appendChild(tooltip);
+    });
+
+    item.addEventListener('mouseout', () => {
+        const tooltip = document.querySelector('.tooltip');
+        if (tooltip) {
+            tooltip.remove();
+        }
+    });
+});
+ </script>
+ <script>
+const pagination = document.querySelector('.pagination');
+
+authorItems.forEach((item, index) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (index === 0) {
+        dot.classList.add('active');
+    }
+    dot.addEventListener('click', () => {
+        currentPage = index;
+        showItems();
+    });
+    pagination.appendChild(dot);
+});
+ </script>
+</html>
