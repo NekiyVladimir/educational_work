@@ -415,6 +415,7 @@ header {
 .container-reviews-site {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .block-reviews-site {
@@ -448,6 +449,7 @@ header {
 }
 
 .block-reviews-site {
+    gap: 20px;
     .service_btn {
         margin: 20px auto;
     }    
@@ -455,12 +457,15 @@ header {
 
 .block-review {
     flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
+    display: flex;
+    text-align: center;
+    font-family: 'Rubik', 'Rubik-fallback-1', 'Helvetica Neue', 'Rubik-fallback-2', Helvetica, 'Rubik-fallback-3', Arial, sans-serif;
+    width: 250px;
 }
 
 .reviews {
     display: flex;
+    gap: 20px; 
     justify-content: space-between;
 }
 
@@ -469,6 +474,7 @@ header {
     padding: 10px;
     border: 1px solid #ccc;
     background-color: #f2f2f2;
+    border-radius: 20px;
 }
 
 
