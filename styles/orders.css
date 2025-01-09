@@ -15,8 +15,25 @@
     padding: 10px;
     margin: 5px;
     background-color: white;
+    border-radius: 20px;
 }
 
-.center-column, .right-column {
-    flex: 2;
+.center-column {
+    flex: 3;
+    padding: 10px;
+    margin: 5px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.center-column h1 {
+    color: #3D424D;
+    font-family: "Montserrat", "Montserrat-fallback-1", "Helvetica Neue", "Montserrat-fallback-2", Helvetica, "Montserrat-fallback-3", Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.right-column {
+    flex: 1;
 }
